@@ -4,3 +4,15 @@
 // Imprime por consola ambas elecciones y en caso de ganar el jugador un mensaje de victoria, 
 // y en caso de perder uno de derrota.
 
+
+function playRound(userOptions = "") {
+ const elements = ["piedra", "papel", "tijera"]
+ const machineOptions = {
+
+ }
+
+    
+}
+
+
+console.log (playRound)
