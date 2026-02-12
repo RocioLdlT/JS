@@ -59,7 +59,7 @@ Todos los elementos del DOM tienen eventos.
 <html></html>
 ```
 
-Mi DOM tendrá 2 chilNodes
+Mi DOM tendrá 2 childNodes
 
 ```html
 <!DOCTYPE >
@@ -100,9 +100,8 @@ document.querySelectorAll()
 home.querySelectorAll(`p`) Estoy pidiéndole que me devuelva todos los <p> que contenga home. Y después pueda modificarlo si es lo que estoy buscando.
 
 ```html
-const = home.querySelector(`p`)
-const hoy = new Date()
-p.textContent = `Aprendiendo a manipular el DOM` + hoy
+const = home.querySelector(`p`) const hoy = new Date() p.textContent =
+`Aprendiendo a manipular el DOM` + hoy
 ```
 
 También podemos crear nuevo elementos desde el DOM:
@@ -112,12 +111,13 @@ console.log(newP) <!-- en bonito -->
 console.dir(newP) <!-- no bonito  -->
 
 También podemos crearlo desde una `section` como es home (ya creada en nuestro html)
-home.appendChild(newP)  <!-- propiedad que crea un hijo -->
+home.appendChild(newP) <!-- propiedad que crea un hijo -->
 
 Otro modo de de crear elementos es:
+
 ```html
 home.innerHTML +=
-<ul> 
+<ul>
     <li>Horror</li>
     <li>Horror 2</li>
 </ul>
@@ -127,10 +127,11 @@ Por ejemplo quiero coger un botón de mi html que tiene un `id="theme-toggle"`:
 const buttonElement(nombrepatata) = document.querySelector(#`theme-toggle`)
 console.dir(buttonElement)
 
-
 ## EVENTOS
+
 Los eventos: haces una function, se escucha y se ejecuta y sucede lo instruccionado ¿?
-(Poner ejemplo button) 
+(Poner ejemplo button)
+
 
 ## Datos
 
@@ -141,5 +142,36 @@ Los eventos: haces una function, se escucha y se ejecuta y sucede lo instruccion
 3. Fetch: Nació como API pero luego se añadieron a las librerías de los servidores, como en NODE.
 
 4. Timers: Son APIs del navegador pero igualmente los añadieron a los servidores.
+5. ESM: significa ECMAScript Modules (módulos ECMAScript). Es el sistema estándar oficial para estructurar, organizar y reutilizar código JavaScript, permitiendo importar y exportar funcionalidades entre diferentes archivos usando import y export
 
-5.
+6. Nombres: HTML y CSS nombres en minúscula con guión intermedio; inicio de minúscula seguido de la segunda palabra en mayúscula para JS;
+
+7. 
+
+```js
+function handleChange () {
+    // console.log('Change')
+// } es lo mismo que lo inmediatamente siguiente pero con function arrow:
+const handleChange = () => {
+        console.log('Change')
+    }
+// Las funciones arrow son las actualmente más novedosas para escribirlas de este modo
+export function main() {
+    console.log('Loaded main')
+    const toggleElement = document.querySelector("#theme-toggle");
+    toggleElement.addEventListener('change', handleChange)
+}
+```
+8. Refactorizar: mejorar tu código. Tú hazlo maja, que funciones y luego ya retocas si ves que has dado mil vueltas 🙂🤯
+
+### Dudas a buscar , revisar o entender.
+
+1.  Qué es hacer defer un script, para qué sirve y porqué lo hacemos.
+
+2.  Diferencias entre asignación de una función funciona y una asignación de una arrow function
+
+3.  Buscar como diferenciar =>, ==, ===,
+4.  Añadir en 1. dentro de JS/js functions.
+5.  Mirar cuando se usan las "", '' o ``.
+6. buscar exactamente preventDefault
+7. Handle, son manejadores por lo que los llamo así seguidos de a loq eu queremos manejar handleMenu, handleDialog, handleDialogMene...
