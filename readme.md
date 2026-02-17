@@ -9,8 +9,8 @@ Browser, Render, JavaScrip, son tres procesos que se encuentran en la base de JS
 
 En JS existen dos procesos que se producen de manera automática en los browser: el _parsing_, encargado del análisis sintáctico, por ejemplo los elementos pintables deben estar en el `body` y el browser es consciente de ello por lo que lo especificará igualmente en nuestro esquema aunque nosotros no lo hayamos añadido (el problema de esto es que en el cierre de alguna etiqueta como un `h1` puede ponerla en alguna parte donde no era nuestra intención terminarla, pero nuestro .html siempre será funcional); y la creación del _árbol del DOM_ que se encuentra dentro de nuestro ordenador.
 
-Tras esto, se le aplican las *reglas de estilo de CSS* (tenemos nuestros lápices pero aún no los hemos usado).
-Después se crea un *árbol de renderizado*. En este punto estamos visualizando y creando el "encuadre de nuestro dibujo, relato o catedral" y definimos dónde va cada elemento, atributo, etc. Es nuestro Render/Layout. Y por último se encuentra la presentación del contenido mediante *Paint*.
+Tras esto, se le aplican las _reglas de estilo de CSS_ (tenemos nuestros lápices pero aún no los hemos usado).
+Después se crea un _árbol de renderizado_. En este punto estamos visualizando y creando el "encuadre de nuestro dibujo, relato o catedral" y definimos dónde va cada elemento, atributo, etc. Es nuestro Render/Layout. Y por último se encuentra la presentación del contenido mediante _Paint_.
 
 ## Motores
 
@@ -132,12 +132,75 @@ console.dir(buttonElement)
 Los eventos: haces una function, se escucha y se ejecuta y sucede lo instruccionado ¿?
 (Poner ejemplo button)
 
+1. .querySelector
+   Consulta a algo seleccionado del DOM con document.querySelector
+
+2. .querySelectorAll
+   Consulta a algo seleccionado del DOM con document.querySelectorAll, pero todos los asociados a ese selector. Por ejemplo si te estas refiriendo a todos los párrafos de tu html.
+
+3. handle(nombre: CLick, Link, Button, etc.)
+   Manejadores. Maneja un evento, después de escuchar a .addEventListener.
+
+4. .preventDEfault
+   Corta el comportamiento por defecto a un evento. Por ejemplo a un enlace "a" no lo dejaría navegar, ya que por defecto, este
+
+5. .addEventListener
+   Escucha
+
+6. .stopPropagation
+   Permite que no se propague la navegación.
+
+7. .pushState
+   Empuja el estado a lo siguiente.
+
+8. history..pushState
+   Permite coger un path y llevarlo arriba, en la ruta del navegador.
+
+9. .popState
+   Devuelve el estado a lo anterior, retrocede (por ejemplo volver a la pagina anterior)
+
+10.
+
+## Singlepage o multipage.
+
+1. SINGLEPAGE: Suelen contener más navegación de scroll. Con enlaces relativos para movernos entre menus, aunque podamos esconderlos a través de hidden para darles una apariencia en la que parezca que navegamos entre páginas. Pueden contener enlaces absolutos que nos redirijan fuera de nuestra SPA.
+2. MULTIPAGE: Contienen más de una página, aunque también puede incluir el scroll de una SPA. Suelen contener enlaces absolutos,
+
+## LIVE SERVER
+
+## Formularios
+
+Ejemplo en 4_web_spa/index.html
+
+Controles del formularios, inputs, checkbox,..., select-options
+Todo ellos van guardados en una etiqueta `form`.
+Dentro de ella podemos añadir los inputs pero hay que tener en cuenta que hay dos maneras de envolver la etiqueta input con la etiqueta label, la primera a través de ` label for="n1"` asociándolo a un id del `input id n1` (si el input esta fuera del label). La segunda manera es meter al input dentro de la etiqueta label.
+
+En nuestro css podremos darle forma a los label (creando la clase .label) con display flex o display grid, por ejemplo.
+
+Básicamente los input son de tipo texto `type ="text"`.
+También están los `type="tel"` para teléfonos; `type="number"` para números;`type="password"` para contraseñas;`type="date"` para fechas;`type="file"` para seleccionar archivos;`type="email"` para email;`type="radio"` para radio-buttons ; `type="checkbox"` para elegir opciones sin discriminar uno de otra opción, en principio, si no lo ;
+
+- label con la etiqueta fieldset para añadir "cuadrados" con leyend (leyend es la pregunta o lo que sea que escribas a nivel del cuadrado añadido), siendo fieldset y leyend elementos pasivos;
+- label con la etiqueta select dentro y a su vez diferentes etiquetas de option añadidas a este select.
+- label con la etiqueta button dentro, creando un botón.
+- label con la etiqueta textarea dentro, creando una zona para añadir más texto, comentarios (podremos delimitarla)
+
+Los inputs tendrán requisitos de validaciones. Los más importantes son:
+
+- `input required` :que es necesario sí o sí.
+- `input pattern=""` : que requiere de cierto patrón, como con los teléfonos o las fechas
+- ...buscar
+
+Al formulario podremos asociarlo a un method, que puedes se "post" o "get". La diferencia de usar un método de otro es que con "post" será la carta que enviamos por correo y "get" será nuestra postal. Hay que tener en cuenta que nuestra carta además si es https, si alguien que no debe leerla la intenta abrir estará encriptada.
+
+Tienen una propiedad especial que es "elements"..._continuará.._
 
 ## Datos
 
 1. ECMA-262 - ECMAScript Language specification, es lo que debe incluir un motor de JS, es el estándar de JS que incluye el conjunto de reglas que define JS.
 
-2. Transpilar: convertir un lenguaje de alto nivel en otro de alto nivel o equivalente; compilar: pasar de un lenguaje de alto nivel a otro de bajo nivel. Compilar es el proceso de traducir código de alto nivel (humano) a código máquina (binario) ejecutable directamente por el ordenador. Transpilar, un subconjunto de la compilación, convierte código fuente de un lenguaje de alto nivel a otro lenguaje de alto nivel equivalente
+2. Transpilar: convertir un lenguaje de alto nivel en otro de alto nivel o equivalente. Transpilar, un subconjunto de la compilación, convierte código fuente de un lenguaje de alto nivel a otro lenguaje de alto nivel equivalente; compilar es el proceso de traducir código de alto nivel (humano) a código máquina (binario) ejecutable directamente por el ordenador.
 
 3. Fetch: Nació como API pero luego se añadieron a las librerías de los servidores, como en NODE.
 
@@ -146,7 +209,7 @@ Los eventos: haces una function, se escucha y se ejecuta y sucede lo instruccion
 
 6. Nombres: HTML y CSS nombres en minúscula con guión intermedio; inicio de minúscula seguido de la segunda palabra en mayúscula para JS;
 
-7. 
+7.
 
 ```js
 function handleChange () {
@@ -162,16 +225,15 @@ export function main() {
     toggleElement.addEventListener('change', handleChange)
 }
 ```
+
 8. Refactorizar: mejorar tu código. Tú hazlo maja, que funciones y luego ya retocas si ves que has dado mil vueltas 🙂🤯
 
 ### Dudas a buscar , revisar o entender.
 
 1.  Qué es hacer defer un script, para qué sirve y porqué lo hacemos.
-
 2.  Diferencias entre asignación de una función funciona y una asignación de una arrow function
-
 3.  Buscar como diferenciar =>, ==, ===,
 4.  Añadir en 1. dentro de JS/js functions.
 5.  Mirar cuando se usan las "", '' o ``.
-6. buscar exactamente preventDefault
-7. Handle, son manejadores por lo que los llamo así seguidos de a loq eu queremos manejar handleMenu, handleDialog, handleDialogMene...
+6.  buscar exactamente preventDefault
+7.  Handle, son manejadores por lo que los llamo así seguidos de a loq eu queremos manejar handleMenu, handleDialog, handleDialogMene...
