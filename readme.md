@@ -196,6 +196,21 @@ Al formulario podremos asociarlo a un method, que puedes se "post" o "get". La d
 
 Tienen una propiedad especial que es "elements"..._continuará.._
 
+## COMPONENTES
+
+Son piezas de código independientes, reutilizables y encapsuladas (formadas por la triada HTML, CSS y JS) que representan una parte de la interfaz de usuario (UI), como un botón, un menú de navegación o una tarjeta de producto. Sirven para simplificar el desarrollo, centralizar la lógica y facilitar el mantenimiento de aplicaciones web compleja.
+
+1. Creamos el componente:
+    - function
+    - llamo selector (creo app-sample; app- porque por validación y lo que es estándar  )
+Diferencias entre componentes y web components que utiliza clases(este último).
+
+Uso de props en componentes*
+
+## CRUD (Create, Read, Update, Delete)
+
+
+
 ## Datos
 
 1. ECMA-262 - ECMAScript Language specification, es lo que debe incluir un motor de JS, es el estándar de JS que incluye el conjunto de reglas que define JS.
